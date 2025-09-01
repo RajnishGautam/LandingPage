@@ -772,8 +772,8 @@ const WhyUs3DCards = () => {
           }
           
           .whyus-section-title {
-            font-size: 1rem;
-            letter-spacing: 0.2rem;
+            font-size: 1.4rem;
+            letter-spacing: 0.1rem;
             margin-bottom: 0.2rem;
             margin-top: -1rem;
           }
