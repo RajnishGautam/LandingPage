@@ -18,7 +18,7 @@ const AboutSection = () => {
         <div className="about-text">
           <h2 className="about-title">
             Develop your dreams 
-            <span className="highlight-text"> digitally</span>
+            <span className="highlighted-text"> digitally</span>
           </h2>
           
           <p className="about-description">

@@ -39,17 +39,17 @@ const HeroSection = () => {
       {/* Main Content */}
       <div className="hero-content">
         <div className="hero-text">
-          <h1 className="hero-title-line1">Forjando Tu</h1>
-          <h1 className="hero-title-line2">Destino Web con</h1>
+          <h1 className="hero-title-line1">Crafting Your</h1>
+          <h1 className="hero-title-line2">Web Destiny With</h1>
           <h1 className="hero-title-line3">
-             <span className="highlight-text">Diseños</span> Impactantes
+             Stunning<span className="highlight-text"> Designs</span>
           </h1>
         </div>
 
         <p className="hero-subtitle">
-          No solo creamos sitios web; construimos
+          We don’t just create websites; we build
           <br />
-          sitios que convierten a tus visitantes en clientes.
+          websites that turn your visitors into customers.
         </p>
 
         <a

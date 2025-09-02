@@ -92,7 +92,7 @@ const WebServices = () => {
       <div className="services-container">
         <div className="services-header">
           <h2 className="services-title">
-            <span className="title-line">Web Development <span className="highlight-text">Services</span></span>
+            <span className="title-line">WEB DEVELOPMENT <span className="highlight-text">SERVICES</span></span>
           </h2>
           <p className="services-subtitle">
             Crafting digital experiences that push the boundaries of what's

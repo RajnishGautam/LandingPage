@@ -3,11 +3,11 @@ import './Testimonials.css';
 
 const testimonialsData = [
   {
-    name: "Leslie Alexander",
-    role: "Freelance React Developer",
-    avatar: "https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png",
+    name: "Ayush Shukla",
+    role: "Yoga Instructor",
+    avatar: "/testinomials/ayush.jpg",
     rating: 5,
-    text: "“You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change.”"
+    text: "My website looks amazing and loads so quickly. The SEO has improved my rankings, and social media marketing is bringing real engagement. I’m very happy with the results."
   },
   {
     name: "Jacob Jones",
@@ -95,7 +95,7 @@ const Testimonials = () => {
     <section className="testimonials-section">
       <div className="container">
         <div className="header">
-          <h2>Our <span className='highlight-text'>happy clients Words</span></h2>
+          <h2>CLIENT <span className='highlight-text'>TESTIMONIALS</span></h2>
         </div>
 
         {/* Desktop Grid */}
