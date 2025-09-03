@@ -391,6 +391,7 @@ body, html {
   .hero-title-line3 {
     font-size: 2rem;
     font-weight: 700;
+    line-height: 1.2;
   }
   
   .hero-background {
