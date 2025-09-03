@@ -124,7 +124,6 @@
   font-weight: bold;
 }
 .discount-image {
-  margin-top: 20px;
   max-width: 80%;
   height: auto;
   display: block;
@@ -288,12 +287,15 @@
     padding-top: 3rem;
   }
   .contact-socials {
-    margin-top: -100px;
-    margin-bottom: -50px;
+    
+    margin: 0 auto 1rem; /* center and add normal spacing */
+  
   }
 
   .contact-middle {
-    padding-top: 20px;
+    
+    margin-top: 0; /* reset */
+    padding-top: 0;
   }
 
   .contact-right {
@@ -325,12 +327,15 @@
 
 @media (max-width: 480px) {
   .contact-section {
-    padding-top: 4rem;
+    padding: 0;
     gap: 1rem;
     margin: 0 auto;
   }
   .contact-container {
     gap: 8px;
+  }
+  .contact-middle{
+    padding: 0;
   }
   .tagline {
     margin-bottom: 5px;
@@ -359,16 +364,15 @@
     font-size: 24px;
   }
 
-  .discount-heading {
-    font-size: 28px;
+    .discount-heading {
+    font-size: 1.8rem;   /* much smaller */
+    line-height: 1.1;  /* tighter spacing */
   }
-
-  .original-price {
-    font-size: 22px;
+  .discount-heading .original-price {
+    font-size: 1.4rem;
   }
-
-  .discounted-price {
-    font-size: 26px;
+  .discount-heading .discounted-price {
+    font-size: 1.8rem;
   }
   .discount-image {
     display: none;
