@@ -188,7 +188,7 @@ body, html {
   color: #888888;
   font-size: clamp(1.125rem, 2.2vw, 5rem);
   line-height: 0.7;
-  margin: 1rem auto;
+  margin: 2rem auto;
   max-width: 90%;
   font-weight: 600;
 }

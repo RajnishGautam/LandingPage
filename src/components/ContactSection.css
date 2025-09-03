@@ -38,15 +38,15 @@
   gap: 4rem;
   z-index: 10;
   position: relative;
-  animation: none !important; /* remove any animation on the container */
-  transform: none !important; /* remove inherited transform */
+  animation: none !important;
+  transform: none !important; 
 }
 
 .contact-socials .social-icon {
   font-size: 30px;
   color: var(--text-color);
   transition: color 0.3s ease;
-  animation: none !important; /* ensure icons themselves don't animate */
+  animation: none !important; 
 }
 
 .contact-socials .social-icon:hover {
