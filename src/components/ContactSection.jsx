@@ -5,7 +5,7 @@ import {
   FaWhatsapp,
   FaLinkedin,
 } from "react-icons/fa";
-import "./Contactsection.css";
+import "./ContactSection.css";
 
 const ContactWithVideo = () => {
   const [showSuccess, setShowSuccess] = useState(false);
