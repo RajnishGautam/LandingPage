@@ -1,5 +1,6 @@
 .process-section {
-  padding: 0rem 0rem 5rem;
+  position: relative; /* needed for absolute positioning inside cards */
+  padding: 0 0 0rem;
   background-color: #000;
   overflow: hidden;
   font-family: sarabun;
@@ -27,11 +28,11 @@
 .process-section__highlight {
   color: #8e1616;
   display: inline-block;
-  margin-left: 0px;
+  margin-left: 0;
   font-weight: 600;
 }
 
-/* Desktop Accordion */
+/* Cards container */
 .process-section__cards-container {
   display: flex;
   gap: 0;
@@ -40,13 +41,13 @@
 }
 
 .process-section__card {
-  position: relative;
+  position: relative; /* for absolute title inside */
   background: transparent;
-  border-right: 2px solid #8e1616; /* fixed right border */
+  border-right: 2px solid #8e1616;
   cursor: pointer;
   overflow: hidden;
-  transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
-              background 0.3s ease, 
+  transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.3s ease,
               transform 0.3s ease;
   will-change: flex, transform, background;
 }
@@ -59,7 +60,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, black,#8e1616);
+  background: linear-gradient(to right, black, #8e1616);
 }
 
 /* Bottom gradient */
@@ -73,12 +74,13 @@
   background: linear-gradient(to right, black, #8e1616);
 }
 
+/* Collapsed and active states */
 .process-section__card--collapsed {
-  flex: 0 1 150px; /* smooth shrink */
+  flex: 0 1 150px;
 }
 
 .process-section__card--active {
-  flex: 2 1 auto; /* smooth expand */
+  flex: 2 1 auto;
   transform: scale(1);
 }
 
@@ -90,7 +92,8 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  position: relative; 
+  height: 100%; /* important for collapsed title */
+  position: relative;
 }
 
 /* Step number */
@@ -109,8 +112,6 @@
   opacity: 0.7;
 }
 
-
-
 /* Step icon container */
 .process-section__step-icon {
   display: flex;
@@ -118,6 +119,14 @@
   align-items: center;
   margin-top: 5rem;
   margin-bottom: 20px;
+  transition: margin 0.4s ease, transform 0.4s ease;
+}
+
+/* Optional: shrink icon slightly when collapsed */
+.process-section__card--collapsed .process-section__step-icon {
+  margin-bottom: 60px; /* space above title */
+  transform: scale(0.9);
+  opacity: 0.6;
 }
 
 /* Step icon image */
@@ -128,26 +137,37 @@
   opacity: 0.8;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-/* Keep same opacity and brightness - only control GIF animation */
 
-/* Remove the scaling and opacity changes, keep only the transform for active state */
-.process-section__card--active .process-section__icon-img {
-  transform: scale(1.2);
-}
-
-/* For inactive cards, keep same opacity but try to make GIF appear static */
-.process-section__card--collapsed .process-section__icon-img {
-  transform: scale(1);
-  /* Try to make GIF appear frozen */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
 /* Step title */
 .process-section__step-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  color: #ffffff;
   font-weight: normal;
   margin-bottom: 20px;
   line-height: 1.3;
+  transition: all 0.4s ease;
+  position: relative; /* normal flow for active card */
+  text-align: center;
+}
+
+/* Collapsed: move title to bottom inside card */
+.process-section__card--collapsed .process-section__step-title {
+  position: absolute;
+  bottom: 10px;   /* sticks at bottom inside card */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  opacity: 0.7;
+  font-size: 1.5rem;
+  z-index: 5;
+}
+
+/* Active: restore normal flow */
+.process-section__card--active .process-section__step-title {
+  position: relative;
+  margin-bottom: 20px;
+  opacity: 1;
+  font-size: 1.6rem;
 }
 
 /* Step description */
@@ -189,7 +209,7 @@
   min-height: fit-content;
   padding: 0px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  position: relative; /* important for step-number */
+  position: relative; 
 }
 
 .process-section__slider-card.active {
@@ -219,9 +239,10 @@
 }
 
 .process-section__slider-btn:hover {
-  background: #888;
+  background: #555;
   border:none;
 }
+
 /* Desktop Accordion */
 @media (min-width: 1025px) {
   .process-section__cards-container {
@@ -266,16 +287,16 @@
 
 /* Mobile <=480px */
 @media (max-width: 480px) {
-  .process-section{
-padding: 3rem 0rem 0rem;
+  .process-section {
+    padding: 3rem 0rem 0rem;
   }
-  .process-section__container{
+  .process-section__container {
     margin-bottom: 1rem;
   }
   .process-section__cards-container {
     display: none;
   }
-  .process-section__title{
+  .process-section__title {
     font-size: 1.5rem;
     font-weight: normal;
     text-transform: uppercase;
@@ -292,20 +313,15 @@ padding: 3rem 0rem 0rem;
   .process-section__slider-controls {
     display: flex;
   }
-  .process-section__step-icon{
-    margin-bottom: 0rem;
-    margin-top: 2rem;
-  }
-   .process-section__step-icon {
+  .process-section__step-icon {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
-
   .process-section__icon-img {
     width: 50px;
     height: 50px;
   }
-  .process-section__step-title{
+  .process-section__step-title {
     font-weight: normal;
-}
+  }
 }

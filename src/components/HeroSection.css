@@ -375,7 +375,7 @@ body, html {
 
 @media (max-width: 480px) {
   .hero-container {
-    min-height: calc(60vh); /* Add navbar height */
+    min-height: calc(80vh); /* Add navbar height */
     padding-top: 5rem; /* Account for fixed navbar */
     min-width: 100%;
 
@@ -394,7 +394,7 @@ body, html {
   }
   
   .hero-background {
-    height: calc(60vh); /* Match container height */
+    height: calc(80vh); /* Match container height */
     min-width: 100%;
     top: 0;
   }

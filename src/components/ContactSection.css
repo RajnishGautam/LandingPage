@@ -1,0 +1,407 @@
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --primary-color: #8e1616;
+  --border-color: #444;
+}
+.contact-section {
+  width: 90%;
+  background-color: var(--bg-color);
+  font-family: 'Sarabun', sans-serif;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  height: auto; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  z-index: 1;
+  margin: 40px auto; 
+  box-sizing: border-box;
+}
+
+.contact-container {
+  max-width: 90%;
+  margin-top: -200px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+  min-height: 600px;
+}
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem; 
+  z-index: 10;
+  position: relative;
+  animation: none !important; /* remove any animation on the container */
+  transform: none !important; /* remove inherited transform */
+}
+
+.contact-socials .social-icon {
+  font-size: 30px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  animation: none !important; /* ensure icons themselves don't animate */
+}
+
+.contact-socials .social-icon:hover {
+  color: var(--primary-color);
+}
+
+/* Only the dot animates */
+.social-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.scroll-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  margin-bottom: 6px;
+  animation: zoomPulse 1.2s infinite ease-in-out;
+}
+
+.scroll-line {
+  width: 2px;
+  height: 40px;
+  background-color: var(--border-color);
+  margin-bottom: 8px;
+}
+
+@keyframes scrollGrowShrink {
+  0%, 100% { height: 0px; }
+  50% { height: 50px; }
+}
+
+/* ========== MIDDLE (TEXT/DISCOUNT SIDE) ========== */
+.contact-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.discount-heading {
+  font-size: 3.5rem;
+  color: var(--text-color);
+  font-weight: normal;
+  line-height: 1;
+}
+
+.discount-pricing {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.original-price {
+  font-size: 3.5rem;
+  color: #fff;
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-weight: normal;
+}
+
+.discounted-price {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.discount-image {
+  margin-top: 20px; 
+  max-width: 80%;
+  height: auto;
+  display: block;
+}
+
+/* ========== RIGHT (CONTACT FORM SIDE) ========== */
+/* === RIGHT CONTAINER === */
+.contact-right {
+  max-width: 600px;
+  z-index: 5;
+}
+
+/* === TAGLINE SECTION === */
+.tagline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.tagline-line {
+  width: 50px;
+  height: 1px;
+  background-color: var(--border-color);
+  margin-right: 10px;
+  font-weight: 100;
+}
+.tagline-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: zoomPulse 1.2s infinite ease-in-out;
+}
+@keyframes zoomPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+}
+.tagline-text {
+  font:
+    26px prompt,
+    sans-serif;
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+/* === FORM DESCRIPTION === */
+.contact-desc {
+  padding-top: 10px;
+  font:
+    16px prompt,
+    sans-serif;
+  color: var(--text-color);
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+
+/* === CONTACT FORM === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* === FORM FIELDS === */
+.contact-form input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: transparent;
+  font:
+    16px prompt,
+    sans-serif;
+  color: var(--text-color);
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+/* === TEXTAREA === */
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: transparent;
+  font:
+    16px prompt,
+    sans-serif;
+  color: var(--text-color);
+  resize: vertical;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.contact-form textarea:focus {
+  border-color: var(--primary-color);
+}
+
+/* === SUBMIT BUTTON === */
+.submitform-button {
+  padding: 14px 25px;
+  background-color: #8e1616;
+  color: white;
+  font:
+    16px prompt,
+    sans-serif;
+  font-weight: 300;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #a03a2a;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .contact-middle {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .contact-right {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .tagline {
+    justify-content: center;
+  }
+
+  .contact-desc {
+    margin: 0 auto 40px;
+  }
+
+  .contact-socials {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto 2rem;
+    padding-top: 0;
+  }
+
+  .social-scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section{
+    padding-top: 3rem;
+  }
+  .contact-socials {
+    margin-top: -100px;
+    margin-bottom: -50px;
+  }
+  
+  .contact-middle {
+    padding-top: 20px;
+  }
+  
+  .contact-right {
+    padding-top: 20px;
+  }
+
+  .tagline-text {
+    font-size: 22px;
+  }
+
+  .contact-desc {
+    font-size: 15px;
+  }
+
+  .discount-heading {
+    font-size: 32px;
+  }
+
+  .original-price {
+    font-size: 26px;
+  }
+
+  .discounted-price {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section{
+    padding-top:5rem;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+
+  .tagline-text {
+    font-size: 18px;
+  }
+
+  .contact-desc {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .contact-middle{
+    padding: 0;
+  }
+  .contact-right{
+    padding: 0;
+  }
+  .contact-socials {
+    gap: 20px;
+    margin-bottom: -20px;
+  }
+
+  .social-icon {
+    font-size: 24px;
+  }
+
+  .discount-heading {
+    font-size: 28px;
+  }
+
+  .original-price {
+    font-size: 22px;
+  }
+
+  .discounted-price {
+    font-size: 26px;
+  }
+  .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+}
+
+/* Scroll offset for smooth scrolling */
+html {
+  scroll-padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 120px;
+  }
+}
+.popup-message {
+  position: fixed;
+  top: 10%;                /* distance from top */            /* center horizontally */
+  transform: translateX(-50%);
+  background-color: #8e1616;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-weight: normal;
+  animation: fadeInOut 3s ease-in-out;
+  z-index: 9999;            /* make sure it's above all content */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -10px); }
+  10% { opacity: 1; transform: translate(-50%, 0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -10px); }
+}

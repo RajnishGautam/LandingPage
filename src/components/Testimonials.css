@@ -51,11 +51,11 @@
   color: #fff;
   font-size: 1.2rem;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .author .role {
-  color: #aaa;
+  color: #b6a9a9;
   font-size: 1rem; /* slightly smaller than name */
   margin: 0;
   line-height: 1.1;
@@ -80,8 +80,8 @@
 }
 
 .testimonial-text {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1;
   color: #eee;
   margin-top: 0.5rem;
 }
@@ -107,26 +107,30 @@
   display: none;
 }
 
-.arrows {
+.testimonials-arrows {
   display: none;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.arrows button {
+.testimonials-arrows button {
   background: #333;
   color: #fff;
   border: none;
+  outline: none;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   cursor: pointer;
   border-radius: 0.25rem;
-  transition: 0.3s;
+  transition: background 0.3s; /* only animate background */
+  box-sizing: border-box; /* ensures no growth when borders appear */
 }
 
-.arrows button:hover {
-  background: #555;
+.testimonials-arrows button:focus {
+  outline: none;
+  border: none;
+  box-shadow: none; /* stop "growth" caused by focus highlight */
 }
 
 /* Desktop Grid */
@@ -168,7 +172,7 @@
     width: calc(50% - 0.5rem); /* 2 cards per row with 1rem gap */
   }
 
-  .arrows {
+  .testimonials-arrows {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
@@ -188,7 +192,10 @@
     font-size: 1.5rem;
     text-transform: uppercase;
 }
-  .arrows {
+  .testimonials-arrows {
     display: flex;
+  }
+  .testimonials-section{
+    padding: 0;
   }
 }

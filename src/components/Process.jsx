@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import './ProcessSection.css';
 
 const ProcessSection = () => {
@@ -60,8 +61,7 @@ const ProcessSection = () => {
     }
   ];
 
-  const [ setGifTimestamps] = useState({});
-
+const [, setGifTimestamps] = useState({});
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);

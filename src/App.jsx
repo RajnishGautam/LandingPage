@@ -6,17 +6,22 @@ import WebServices from './components/WebServices'
 import Process from './components/Process'
 import Testinomials from './components/Testimonials'
 import WorkSection from './components/WorkSection'
+import PartnersMarquee from './components/PartnersMarquee'
+import ContactWithVideo from './components/ContactSection'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <div className="app">
       <Header />
       <HeroSection />
-      <Testinomials />
       <WorkSection />
+      <Testinomials />
+      <PartnersMarquee />
       <WebServices />
       <Process />
-      <AboutSection />
+      <ContactWithVideo />
+      <Footer />
     </div>
   )
 }

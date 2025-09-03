@@ -7,7 +7,7 @@ const testimonialsData = [
     role: "Yoga Instructor",
     avatar: "/testinomials/ayush.jpg",
     rating: 5,
-    text: "My website looks amazing and loads so quickly. The SEO has improved my rankings, and social media marketing is bringing real engagement. I’m very happy with the results."
+    text: "My website looks amazing and loads so quickly. The SEO has improved my rankings, and SM marketing is bringing real engagement."
   },
   {
     name: "Jacob Jones",
@@ -156,7 +156,7 @@ const Testimonials = () => {
             })}
           </div>
 
-          <div className="arrows">
+          <div className="testimonials-arrows">
             <button onClick={prevTestimonial}>&lt;</button>
             <button onClick={nextTestimonial}>&gt;</button>
           </div>
