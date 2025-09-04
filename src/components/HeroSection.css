@@ -378,7 +378,7 @@ body, html {
 
 @media (max-width: 480px) {
   .hero-container {
-    min-height: calc(80vh); 
+    min-height: calc(70vh); 
     padding-top: 5rem; 
     min-width: 100%;
 
@@ -398,7 +398,7 @@ body, html {
   }
   
   .hero-background {
-    height: calc(80vh); 
+    height: calc(70vh); 
     min-width: 100%;
     top: 0;
   }
