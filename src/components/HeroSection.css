@@ -251,17 +251,20 @@ body, html {
     color: #ffffff;
     font-weight: 700;
     font-size: 6rem;
+    margin-bottom: 1rem;
   }
 
   .hero-title-line3 {
     color: #ffffff;
     font-weight: 700;
     font-size: 6rem;
+    margin-bottom: 1rem;
   }
   
   .hero-subtitle {
     margin: 2rem auto;
     font-size: 2.5rem;
+    line-height: 1.1;
   }
   
   .whatsapp-button {
