@@ -270,53 +270,31 @@
   }
 }
 /* Responsive Design */
-@media (min-width: 1025px) and (max-width: 1400px) {
-  .web-services-section {
+
+/* Tablet View (768px to 1023px) - 2 columns for better layout */
+@media (min-width: 768px) and (max-width: 1400px) {
+   .web-services-section {
+    padding: 0rem 3% 0rem;
+    height: fit-content;
+  }
+.services-container {
+    padding: 1rem;
     min-height: fit-content;
   }
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-top: -30px;
-  }
-  .webdevcard-content {
-    padding: 0rem 1.5rem;
-  }
-  .service-title {
-    margin: 0;
-  }
-}
-/* Tablet View (768px to 1023px) - 2 columns for better layout */
-@media (min-width: 768px) and (max-width: 1400px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-.services-header{
-  padding-top: 2rem;
-}
-  .service-webdevcard {
-    height: fit-content;
-  }
-}
-@media (max-width: 768px) {
-  .web-services-section {
-    padding: 0rem 3% 0rem;
-    height: fit-content;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+   margin: 0 auto;
   }
 
   .webdevcard-content {
     padding-top: 2rem;
     padding-bottom: 0rem;
   }
-
+.services-header{
+  padding-top: 0rem !important;}
   .services-title {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
   }
   .title-line::after {
@@ -324,8 +302,7 @@
     margin-bottom: -10px;
   }
   .services-subtitle {
-    font-size: 1.2rem;
-    line-height: 1;
+    display: none;
   }
   .service-webdevcard {
     padding: 0rem 1rem;
@@ -333,7 +310,7 @@
     min-height: 200px; /* Or whatever is your design need */
   }
   .webdevcard-content {
-    padding: 1rem;
+    padding: 0rem;
     height: 100%;
     text-align: center;
     display: flex;
@@ -356,6 +333,78 @@
   .service-description {
     font-size: 1.2rem;
     text-align: center;
+    padding: 0rem;
+  }
+
+  .cta-contentweb p {
+    display: none;
+  }
+  .ctaa-button {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .web-services-section {
+    padding: 0rem 3% 0rem;
+    height: fit-content;
+  }
+.services-container {
+    padding: 1rem;
+    min-height: fit-content;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+   margin: 0 auto;
+  }
+
+  .webdevcard-content {
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+  }
+.services-header{
+  padding-top: 0rem !important;}
+  .services-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .title-line::after {
+    width: 100px;
+    margin-bottom: -10px;
+  }
+  .services-subtitle {
+    display: none;
+  }
+  .service-webdevcard {
+    padding: 0rem 1rem;
+    height: auto; /* Let content control height */
+    min-height: 200px; /* Or whatever is your design need */
+  }
+  .webdevcard-content {
+    padding: 0rem;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  .icon-emoji {
+    margin-top: 0px;
+  }
+  .icon-pulse {
+    margin-top: 0px;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+  }
+  .service-description {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0rem;
   }
 
   .cta-contentweb p {
@@ -385,11 +434,11 @@
   }
   .services-title {
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
   }
   .services-header {
-    padding: 0;
+    padding: 0rem !important;
   }
   .services-subtitle {
     display: none;

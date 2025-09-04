@@ -95,8 +95,8 @@ const ContactWithVideo = () => {
         {/* Text Content */}
         <div className="contact-middle">
           <h2 className="discount-heading">
-            Develop your dreams digitally starting at{" "}
-            <span className="original-price">$799</span>
+            Develop your dream website starting at{" "}
+            only
             <span className="discounted-price"> $499</span>
           </h2>
           {/* Image below the text */}

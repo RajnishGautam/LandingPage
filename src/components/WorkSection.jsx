@@ -4,7 +4,7 @@ import "./WorkSection.css";
 const workData = [
   {
     id: 1,
-    company: "Dr. Gamaliel",
+    company: "Dr. GAMALIEL",
     image: "/previews/site1.jpg",
     link: "https://drgamaliel.com/",
   },
@@ -33,30 +33,68 @@ const WorkSection = () => {
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  // touch state
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
+
   useEffect(() => {
     const handleResize = () => {
       setIsTablet(window.innerWidth >= 768 && window.innerWidth <= 1279);
       setIsMobile(window.innerWidth <= 767);
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const prevWork = () => {
     if (isTablet) {
-      setCurrentIndex(prev => (prev === 0 ? workData.length - 2 : prev - 2));
+      setCurrentIndex((prev) =>
+        prev === 0 ? workData.length - 2 : prev - 2
+      );
     } else {
-      setCurrentIndex(prev => (prev === 0 ? workData.length - 1 : prev - 1));
+      setCurrentIndex((prev) =>
+        prev === 0 ? workData.length - 1 : prev - 1
+      );
     }
   };
 
   const nextWork = () => {
     if (isTablet) {
-      setCurrentIndex(prev => (prev >= workData.length - 2 ? 0 : prev + 2));
+      setCurrentIndex((prev) =>
+        prev >= workData.length - 2 ? 0 : prev + 2
+      );
     } else {
-      setCurrentIndex(prev => (prev === workData.length - 1 ? 0 : prev + 1));
+      setCurrentIndex((prev) =>
+        prev === workData.length - 1 ? 0 : prev + 1
+      );
     }
+  };
+
+  // swipe handlers
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+
+    const distance = touchStartX - touchEndX;
+
+    if (distance > 50) {
+      // swipe left → next
+      nextWork();
+    } else if (distance < -50) {
+      // swipe right → prev
+      prevWork();
+    }
+
+    setTouchStartX(0);
+    setTouchEndX(0);
   };
 
   return (
@@ -105,9 +143,14 @@ const WorkSection = () => {
               return (
                 <div
                   key={item.id}
-                  className={`work-card ${visible ? 'active' : 'hidden'}`}
+                  className={`work-card ${visible ? "active" : "hidden"}`}
                 >
-                  <div className="preview-box">
+                  <div
+                    className="preview-box"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                  >
                     <img
                       src={item.image}
                       alt={item.company}
@@ -121,7 +164,7 @@ const WorkSection = () => {
                     rel="noopener noreferrer"
                     className="visit-link"
                   >
-                    Visit Website <span className="arrow">→</span>
+                    Visit Website
                   </a>
                 </div>
               );

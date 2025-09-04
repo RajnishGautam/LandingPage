@@ -155,19 +155,19 @@
 .arrows {
   display: none;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 1rem;
 }
 
 .arrows button {
-  background: #333;
-  color: #fff;
+  background: transparent;
+  color: #8e1616;
   border: none;
   outline: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  padding: 0rem 0rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 0.25rem;
+  
   transition: background 0.3s; /* only animate background */
   box-sizing: border-box;
 }
@@ -175,7 +175,7 @@
 .arrows button:focus {
   outline: none;
   border: none;
-  box-shadow: none; /* stop "growth" caused by focus highlight */
+  box-shadow: none; 
 }
 
 /* Desktop Grid */
@@ -192,9 +192,9 @@
 }
 
 /* Tablet Slider */
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 481px) and (max-width: 1279px) {
   .work-section {
-    padding: 1rem 2rem 0rem;
+    padding: 0rem 0rem 0rem;
   }
   
   .work-grid {
@@ -203,7 +203,7 @@
   
   .work-slider {
     display: block;
-    padding: 0 2rem 2rem;
+    padding: 0 2rem 0rem;
   }
   
   .slider-row {
@@ -211,7 +211,10 @@
     justify-content: center;
     gap: 1rem;
   }
-  
+  .work-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem;
+  }
   .work-card {
     display: none;
     width: 280px;
@@ -231,7 +234,7 @@
 }
 
 /* Mobile Slider */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .work-section {
     padding: 0;
   }
@@ -242,14 +245,11 @@
   
   .work-slider {
     display: block;
-    padding: 0 1rem 1rem;
+    padding: 0 0rem 0rem !important;
   }
   
   .work-card {
-    display: none;
-    width: 100%;
-    max-width: 300px;
-    padding: 1rem 0.5rem 0.5rem;
+    display: none
   }
   
   .work-card.active {
@@ -263,15 +263,16 @@
   }
   
   .work-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem;
   }
   
   .company-name,
   .visit-link {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     margin-left: 0.5rem;
     margin-top: 0;
+    font-weight: normal;
   }
   
   .arrows {

@@ -202,20 +202,23 @@
   justify-content: center;
 }
 
+/* Ensure slider cards auto-expand to fit content */
 .process-section__slider-card {
   display: none;
   background: #1A1A1A;
   border-radius: 12px;
-  min-height: fit-content;
-  padding: 0px;
+  min-height: auto; /* instead of fit-content */
+  padding: 16px; /* enough padding */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   position: relative; 
+  flex: 0 0 auto; /* allow height to grow */
 }
 
+/* Active card */
 .process-section__slider-card.active {
   display: block;
-  padding: 0px;
-  height: fit-content;
+  height: auto; /* ensures card height grows with content */
+  padding: 16px;
 }
 
 .process-section__slider-controls {
@@ -226,18 +229,31 @@
 }
 
 .process-section__slider-btn {
-  background: #555656;
-  color: #fff;
+  background: transparent;
+  color: #8e1616;
   border: none;
   width: 40px;
   height: 40px;
   border-radius: 10%;
   cursor: pointer;
   padding: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: all 0.3s ease;
 }
-
+/* Step description adjustments */
+.process-section__step-description {
+  max-height: none; /* remove max-height restriction */
+  overflow: visible;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+/* Active state */
+.process-section__card--active .process-section__step-description,
+.process-section__slider-card.active .process-section__step-description {
+  opacity: 1;
+  transform: translateY(0);
+}
 .process-section__slider-btn:hover {
   background: #555;
   border:none;
@@ -260,28 +276,58 @@
   }
   .process-section__slider {
     display: block;
+    padding-bottom: 0rem;
   }
   .process-section__slider-card {
     flex: 0 0 calc(25% - 0.75rem); /* 4 cards per row */
+    padding: 0px !important;
+    margin-bottom: 0rem; /* spacing between rows */
   }
   .process-section__slider-controls {
     display: flex;
+  }
+  .process-section__title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+  }
+  .process-section__step-description {
+    display: none;
   }
 }
 
 /* Tablet 481px - 767px */
 @media (min-width: 481px) and (max-width: 767px) {
+  .process-section {
+    padding: 2rem 0rem 0rem;
+  }
+  .process-section__container {
+    margin-bottom: 1rem;
+    height: fit-content;
+  }
   .process-section__cards-container {
     display: none;
   }
   .process-section__slider {
     display: block;
+    padding-bottom: 0rem;
+  }
+  .process-section__title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
   }
   .process-section__slider-card {
     flex: 0 0 calc(50% - 0.5rem); /* 2 cards per row */
+    padding: 0rem !important;
   }
   .process-section__slider-controls {
     display: flex;
+  }
+  .process-section__step-description {
+    display: none;
   }
 }
 
@@ -297,9 +343,10 @@
     display: none;
   }
   .process-section__title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: normal;
     text-transform: uppercase;
+    letter-spacing: .1rem;
   }
   .process-section__slider {
     display: block;
@@ -322,6 +369,12 @@
     height: 70px;
   }
   .process-section__step-title {
+     
     font-weight: normal;
+     font-size: 1rem;
+    margin: 0 0 0.5rem 0 !important; /* corrected shorthand */
+  }
+  .process-section__step-description {
+    display: none;
   }
 }

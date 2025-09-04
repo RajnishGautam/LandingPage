@@ -110,17 +110,17 @@
 .testimonials-arrows {
   display: none;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
 .testimonials-arrows button {
-  background: #333;
-  color: #fff;
+  background: transparent;
+  color: #8e1616;
   border: none;
   outline: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  padding: 0rem .5rem;
+  font-size: 1.5rem;
   cursor: pointer;
   border-radius: 0.25rem;
   transition: background 0.3s; /* only animate background */
@@ -148,11 +148,20 @@
 /* Tablet Slider */
 /* Tablet Slider */
 @media (min-width: 481px) and (max-width: 1023px) {
+  .testimonials-section {
+    padding: 0rem 1rem;
+  }
   .testimonials-grid {
     display: none;
     padding-top: 2rem
     ;
   }
+   .header h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+   margin: 1rem auto;
+   letter-spacing: .1rem;
+}
   .testimonials-slider {
     display: block;
   }
@@ -171,7 +180,12 @@
     display: block;
     width: calc(50% - 0.5rem); /* 2 cards per row with 1rem gap */
   }
-
+.testimonial-text {
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #eee;
+  margin-top: 0.5rem;
+}
   .testimonials-arrows {
     display: flex;
     justify-content: center;
@@ -187,10 +201,13 @@
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
+    padding: 1rem;
   }
   .header h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
+   margin: 1rem auto;
+   letter-spacing: .1rem;
 }
   .testimonials-arrows {
     display: flex;
@@ -198,4 +215,10 @@
   .testimonials-section{
     padding: 0;
   }
+  .testimonial-text {
+  font-size: 1rem;
+  line-height: 1;
+  color: #eee;
+  margin-top: 0.5rem;
+}
 }
