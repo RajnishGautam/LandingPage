@@ -417,19 +417,19 @@
 @media (max-width: 480px) {
   .web-services-section {
     min-height: auto;
-    padding: 0rem 5% 0rem;
+    padding: 0rem 0% 0rem;
   }
   .services-container {
-    padding-top: 1rem;
+    padding: 0rem 1rem;
     min-height: fit-content;
   }
   .service-webdevcard {
     height: auto;
     min-height: 100px; /* Shrink even more */
-    padding: 0.3rem;
+    padding: 0rem;
   }
   .webdevcard-content {
-    padding: 0.3rem 0rem 0rem;
+    padding: 0rem 0rem 0rem;
     margin: 0;
   }
   .services-title {
@@ -445,7 +445,7 @@
   }
   .services-grid {
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     gap: 0.5rem;
   }
   .service-webdevcard.visible {
