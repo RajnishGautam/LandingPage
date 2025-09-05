@@ -190,11 +190,16 @@
     display: none;
   }
 }
-@media (min-width: 1025px) and (max-width: 14px) {
+@media (min-width: 1025px) and (max-width: 1400px) {
   .work-title {
     font-size: 2.5rem !important;
     margin-bottom: 1rem;
-  }}
+  }
+.work-grid {
+padding: 0px;
+   
+  }
+}
 /* Tablet Slider */
 @media (min-width: 481px) and (max-width: 1024px) {
   .work-section {
