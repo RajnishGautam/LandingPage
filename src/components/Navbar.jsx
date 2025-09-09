@@ -12,12 +12,12 @@ function Navbar() {
       {/* WhatsApp CTA on right */}
       <div className="cta">
         <a
-          href="https://wa.me/917838649867"
+          href="https://calendly.com/punto7x"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-btn"
         >
-          WhatsApp Now
+          Schedule Appointment
         </a>
       </div>
     </header>

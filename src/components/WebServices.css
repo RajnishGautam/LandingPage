@@ -22,9 +22,10 @@
 }
 
 .services-title {
-  font-size: 69px;
+  font-size: 2.5rem;
   font-weight: normal;
   position: relative;
+  letter-spacing: .2rem;
   font-family: "sarabun";
   color: #ffffff;
   margin: 0 auto;
@@ -51,7 +52,7 @@
 }
 
 .services-subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ffffff;
   font-family: "sarabun";
   font-weight: normal;
@@ -83,7 +84,7 @@
     inset 0 0 20px rgba(255, 255, 255, 0.05);
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   backdrop-filter: blur(10px);
-  padding: 1rem 0rem;
+  padding: 1rem 1rem;
   cursor: pointer;
   height: fit-content;
 }
@@ -183,7 +184,7 @@
   line-height: 1; /* smoother text spacing */
   text-align: center;
   flex-grow: 0; /* prevent stretching */
-  margin: 1.5rem 0 0;
+  margin: 1rem 0 0;
 }
 
 /* Hover Overlay */

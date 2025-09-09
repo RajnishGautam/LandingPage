@@ -94,10 +94,7 @@ const WebServices = () => {
           <h2 className="services-title">
             <span className="title-line">WEB DEVELOPMENT <span className="highlight-text">SERVICES</span></span>
           </h2>
-          <p className="services-subtitle">
-            Crafting digital experiences that push the boundaries of what's
-            possible
-          </p>
+          
         </div>
 
         <div className="services-grid">

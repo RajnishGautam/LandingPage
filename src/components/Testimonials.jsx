@@ -3,60 +3,60 @@ import './Testimonials.css';
 
 const testimonialsData = [
   {
-    name: "Ayush Shukla",
-    role: "Yoga Instructor",
-    avatar: "/testinomials/ayush.jpg",
+    name: "Diego Uribe",
+    role: "Entrepreneur",
+    avatar: "/testinomials/diego.jpg",
     rating: 5,
     text: "My website looks amazing and loads so quickly. The SEO has improved my rankings, and SM marketing is bringing real engagement."
   },
   {
-    name: "Jacob Jones",
-    role: "Digital Marketer",
-    avatar: "https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png",
+    name: "Dr. Gamaliel",
+    role: "Pedeatrician",
+    avatar: "/testinomials/gamaliel.png",
     rating: 5,
-    text: "“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.”"
+    text: "Punto7x created a professional, user-friendly website for my clinic with excellent service and timely support. Highly recommended."
   },
   {
-    name: "Jenny Wilson",
-    role: "Graphic Designer",
-    avatar: "https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png",
+    name: "Martiza Lopez Palacio",
+    role: "Fashion Influencer",
+    avatar: "/testinomials/marlo.png",
     rating: 5,
-    text: "“I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”"
+    text: "Punto7x built a modern, responsive website for our business, combining sleek design with excellent functionality and support."
   },
   {
-    name: "Leslie Alexander",
-    role: "Freelance React Developer",
-    avatar: "https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png",
+    name: "Yazmin Gallegos",
+    role: "SM Influencer",
+    avatar: "/testinomials/yazmin.png",
     rating: 5,
-    text: "“You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change.”"
+    text: "Punto7x crafted smart marketing strategies that boosted our brand visibility and drove consistent customer engagement."
   },
   {
-    name: "Jacob Jones",
-    role: "Digital Marketer",
-    avatar: "https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png",
+    name: "Enrique Gomez",
+    role: "Business Owner",
+    avatar: "/testinomials/liam.jpg",
     rating: 5,
-    text: "“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.”"
+    text: "Their marketing solutions are innovative and result-driven, helping us reach new audiences and strengthen overall market presence."
   },
   {
-    name: "Jenny Wilson",
-    role: "Graphic Designer",
-    avatar: "https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png",
+    name: "Jennifer",
+    role: "Educator",
+    avatar: "/testinomials/jennifer.jpg",
     rating: 5,
-    text: "“I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”"
+    text: "Punto7x delivered effective lead generation campaigns, bringing quality leads and improving our conversion rates significantly over time."
   },
   {
-    name: "Jacob Jones",
-    role: "Digital Marketer",
-    avatar: "https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png",
+    name: "Veronica",
+    role: "SM Influencer",
+    avatar: "/testinomials/veronica.jpg",
     rating: 5,
-    text: "“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.”"
+    text: "Punto7x managed my social media marketing with creativity, increasing engagement and building stronger connections online."
   },
   {
-    name: "Jenny Wilson",
-    role: "Graphic Designer",
-    avatar: "https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png",
+    name: "Abraham",
+    role: "Dentist",
+    avatar: "/testinomials/Abraham.jpg",
     rating: 5,
-    text: "“I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”"
+    text: "Their strategies for lead generation are practical and result-oriented, consistently driving potential customers to our business pipeline."
   }
 ];
 

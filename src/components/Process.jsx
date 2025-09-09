@@ -15,49 +15,49 @@ const ProcessSection = () => {
       icon: "/process/goodwill.gif",
       staticIcon: "/process/goodwill.png", 
       title: "Kickoff Meeting", 
-      description: "We start with a comprehensive discussion to understand your vision, goals, and requirements. This initial phase sets the foundation for the entire project by aligning expectations and defining clear objectives." 
+      description: "We begin with focused discussions to align goals, define objectives, and establish a strong foundation for overall project success." 
     },
     { 
       number: "02", 
       icon: "/process/design.gif",
       staticIcon: "/process/design.png", 
       title: "Design Stage", 
-      description: "Our creative team crafts stunning visual concepts and user interfaces that reflect your brand identity. We focus on creating designs that are both aesthetically pleasing and functionally optimized for user experience." 
+      description: "Our creative team crafts brand-centered designs that unite striking visuals with functional clarity, delivering engaging, optimized, and memorable user experiences" 
     },
     { 
       number: "03", 
       icon: "/process/content.gif",
       staticIcon: "/process/content.png", 
       title: "Content Writing", 
-      description: "Professional copywriters develop compelling, SEO-optimized content that resonates with your target audience. Every word is carefully chosen to communicate your message effectively and drive engagement." 
+      description: "Expert writers develop clear, compelling content that resonates with your audience, enhances SEO, and effectively communicates your brand message." 
     },
     { 
       number: "04", 
       icon: "/process/development.gif",
       staticIcon: "/process/development.png", 
       title: "Development", 
-      description: "Our skilled developers bring the designs to life using cutting-edge technologies and best practices. We ensure clean, efficient code that delivers optimal performance across all devices and platforms." 
+      description: "Skilled developers transform designs into reality with clean code, advanced technologies, and optimized performance across devices." 
     },
     { 
       number: "05", 
       icon: "/process/animation.gif",
       staticIcon: "/process/animation.png", 
       title: "Animation Stage", 
-      description: "We add dynamic elements and smooth transitions that enhance user interaction and create memorable experiences. These animations are carefully crafted to improve usability without compromising performance." 
+      description: "We integrate dynamic elements and smooth transitions, enhancing interaction, improving usability, and ensuring memorable user experiences." 
     },
     { 
       number: "06", 
       icon: "/process/assurance.gif",
       staticIcon: "/process/assurance.png", 
       title: "Quality Assurance", 
-      description: "Rigorous testing across multiple browsers, devices, and scenarios ensures flawless functionality. Our QA process identifies and resolves any issues before launch, guaranteeing a smooth user experience." 
+      description: "Rigorous testing across devices and scenarios ensures flawless functionality, resolving issues and guaranteeing smooth user experiences." 
     },
     { 
       number: "07", 
       icon: "/process/launch.gif",
       staticIcon: "/process/launch.png", 
       title: "Site Launch", 
-      description: "We handle the complete deployment process, ensuring your website goes live smoothly with optimal performance. Post-launch support and monitoring guarantee everything runs perfectly from day one." 
+      description: "We manage deployment seamlessly, ensuring smooth launch, optimized performance, and ongoing support with reliable monitoring." 
     }
   ];
 
