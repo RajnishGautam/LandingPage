@@ -97,6 +97,15 @@ const WorkSection = () => {
     setTouchEndX(0);
   };
 
+  // Auto-switch every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextWork();
+    }, 2000); // 5000ms = 5 seconds
+
+    return () => clearInterval(interval);
+  }, [isTablet, isMobile]);
+
   return (
     <section className="work-section">
       <div className="container">

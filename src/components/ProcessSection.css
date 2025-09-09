@@ -1,5 +1,5 @@
 .process-section {
-  position: relative; /* needed for absolute positioning inside cards */
+  position: relative;
   padding: 0 0 0rem;
   background-color: #000;
   overflow: hidden;
@@ -42,7 +42,7 @@
 }
 
 .process-section__card {
-  position: relative; /* for absolute title inside */
+  position: relative;
   background: transparent;
   border-right: 2px solid #8e1616;
   cursor: pointer;
@@ -93,7 +93,7 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  height: 100%; /* important for collapsed title */
+  height: 100%;
   position: relative;
 }
 
@@ -106,6 +106,7 @@
   right: 20px;
   opacity: 0.3;
   z-index: 10;
+  color: #fff;
   transition: opacity 0.6s ease;
 }
 
@@ -125,7 +126,7 @@
 
 /* Optional: shrink icon slightly when collapsed */
 .process-section__card--collapsed .process-section__step-icon {
-  margin-bottom: 60px; /* space above title */
+  margin-bottom: 60px;
   transform: scale(0.9);
   opacity: 0.6;
 }
@@ -147,14 +148,14 @@
   margin-bottom: 20px;
   line-height: 1.3;
   transition: all 0.4s ease;
-  position: relative; /* normal flow for active card */
+  position: relative;
   text-align: center;
 }
 
 /* Collapsed: move title to bottom inside card */
 .process-section__card--collapsed .process-section__step-title {
   position: absolute;
-  bottom: 10px;   /* sticks at bottom inside card */
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -180,6 +181,7 @@
   max-width: 500px;
   line-height: 1;
   font-size: 1.2rem;
+  color: #ccc;
   transition: opacity 0.6s ease, transform 0.6s ease, max-height 0.6s ease;
 }
 
@@ -208,17 +210,17 @@
   display: none;
   background: #1A1A1A;
   border-radius: 12px;
-  min-height: auto; /* instead of fit-content */
-  padding: 16px; /* enough padding */
+  min-height: auto;
+  padding: 16px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   position: relative; 
-  flex: 0 0 auto; /* allow height to grow */
+  flex: 0 0 auto;
 }
 
 /* Active card */
 .process-section__slider-card.active {
   display: block;
-  height: auto; /* ensures card height grows with content */
+  height: auto;
   padding: 16px;
 }
 
@@ -241,23 +243,26 @@
   font-size: 2rem;
   transition: all 0.3s ease;
 }
+
 /* Step description adjustments */
 .process-section__step-description {
-  max-height: none; /* remove max-height restriction */
+  max-height: none;
   overflow: visible;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
 /* Active state */
 .process-section__card--active .process-section__step-description,
 .process-section__slider-card.active .process-section__step-description {
   opacity: 1;
-
+  transform: translateY(0);
 }
+
 .process-section__slider-btn:hover {
-  background: #555;
-  border:none;
+  background: transparent;
+  border: none;
 }
 
 /* Desktop Accordion */
@@ -269,6 +274,7 @@
     display: none;
   }
 }
+
 @media (min-width: 1025px) and (max-width: 1400px) {
   .process-section {
     padding: 2rem 0rem 0rem;
@@ -279,7 +285,7 @@
     text-transform: uppercase;
     letter-spacing: .1rem;
   }
-.process-section__step-title {
+  .process-section__step-title {
     font-size: 1.2rem;
     margin: 0 0 0.5rem 0 !important;
   }
@@ -290,7 +296,8 @@
     width: 70px;
     height: 70px;
   }
- }
+}
+
 /* Tablet 768px - 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
   .process-section__cards-container {
@@ -301,9 +308,9 @@
     padding-bottom: 0rem;
   }
   .process-section__slider-card {
-    flex: 0 0 calc(25% - 0.75rem); /* 4 cards per row */
+    flex: 0 0 calc(25% - 0.75rem);
     padding: 0px !important;
-    margin-bottom: 0rem; /* spacing between rows */
+    margin-bottom: 0rem;
   }
   .process-section__slider-controls {
     display: flex;
@@ -342,7 +349,7 @@
     letter-spacing: .1rem;
   }
   .process-section__slider-card {
-    flex: 0 0 calc(50% - 0.5rem); /* 2 cards per row */
+    flex: 0 0 calc(50% - 0.5rem);
     padding: 0rem !important;
   }
   .process-section__slider-controls {
@@ -353,10 +360,10 @@
   }
 }
 
-/* Mobile <=480px */
+/* Mobile <=480px - UPDATED TO SHOW 2 CARDS */
 @media (max-width: 480px) {
   .process-section {
-    padding: 3rem 0rem 0rem;
+    padding: 3rem 0rem 1rem;
   }
   .process-section__container {
     margin-bottom: 1rem;
@@ -376,25 +383,27 @@
     margin-top: -50px;
   }
   .process-section__slider-card {
-    flex: 0 0 100%;
-    padding: 24px;
+    flex: 0 0 calc(50% - 0.5rem); /* Show 2 cards per row */
+    padding: 16px;
   }
   .process-section__slider-controls {
     display: flex;
   }
+  .process-section__step-number {
+    display: none;
+  }
   .process-section__step-icon {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
   .process-section__icon-img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   .process-section__step-title {
-     
     font-weight: normal;
-     font-size: 1rem;
-    margin: 0 0 0.5rem 0 !important; /* corrected shorthand */
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem 0 !important;
   }
   .process-section__step-description {
     display: none;

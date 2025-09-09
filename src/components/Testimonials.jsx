@@ -65,6 +65,10 @@ const Testimonials = () => {
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  // touch state
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
+
   useEffect(() => {
     const handleResize = () => {
       setIsTablet(window.innerWidth >= 481 && window.innerWidth <= 1023);
@@ -89,6 +93,38 @@ const Testimonials = () => {
     } else {
       setCurrentIndex(prev => (prev === testimonialsData.length - 1 ? 0 : prev + 1));
     }
+  };
+
+  // Auto change every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 2000); // 2 seconds
+
+    return () => clearInterval(interval);
+  }, [isTablet]);
+
+  // Swipe handlers
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    const distance = touchStartX - touchEndX;
+
+    if (distance > 50) {
+      nextTestimonial();
+    } else if (distance < -50) {
+      prevTestimonial();
+    }
+
+    setTouchStartX(0);
+    setTouchEndX(0);
   };
 
   return (
@@ -123,7 +159,12 @@ const Testimonials = () => {
 
         {/* Slider for Tablet & Mobile */}
         <div className="testimonials-slider">
-          <div className="slider-row">
+          <div 
+            className="slider-row"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             {testimonialsData.map((t, index) => {
               let visible = false;
               if (isTablet) {

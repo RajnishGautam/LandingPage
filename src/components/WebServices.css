@@ -418,7 +418,7 @@
 @media (max-width: 480px) {
   .web-services-section {
     min-height: auto;
-    padding: 0rem 0% 0rem;
+    padding: 2.5rem 0% 1rem;
   }
   .services-container {
     padding: 0rem 1rem;

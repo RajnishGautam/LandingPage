@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useRef } from 'react';
 import './ProcessSection.css';
 
 const ProcessSection = () => {
@@ -8,6 +7,8 @@ const ProcessSection = () => {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== 'undefined' ? window.innerWidth : 1200
   );
+
+  const touchStartX = useRef(null);
 
   const processSteps = [
     { 
@@ -61,32 +62,32 @@ const ProcessSection = () => {
     }
   ];
 
-const [, setGifTimestamps] = useState({});
+  // Resize listener
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Auto-slide for mobile/tablet
+  useEffect(() => {
+    if (windowWidth <= 1024) {
+      const interval = setInterval(() => {
+        handleNextSlide();
+      }, 2000);
+      return () => clearInterval(interval);
+    }
+  }, [windowWidth, currentSlide]);
+
   const handleCardClick = (index) => {
     if (windowWidth > 1024) {
       setActiveCard(index);
-      // Reset GIF for active card
-      setGifTimestamps(prev => ({
-        ...prev,
-        [index]: Date.now()
-      }));
     }
   };
 
   const handleCardHover = (index) => {
     if (windowWidth > 1024) {
       setActiveCard(index);
-      // Reset GIF for active card
-      setGifTimestamps(prev => ({
-        ...prev,
-        [index]: Date.now()
-      }));
     }
   };
 
@@ -94,7 +95,8 @@ const [, setGifTimestamps] = useState({});
     if (windowWidth <= 1024 && windowWidth > 480) {
       setCurrentSlide(prev => prev > 0 ? prev - 1 : processSteps.length - 4);
     } else if (windowWidth <= 480) {
-      setCurrentSlide(prev => prev > 0 ? prev - 1 : processSteps.length - 1);
+      // Mobile now shows 2 cards, so we slide by 2
+      setCurrentSlide(prev => prev > 0 ? prev - 2 : processSteps.length - 2);
     }
   };
 
@@ -102,7 +104,8 @@ const [, setGifTimestamps] = useState({});
     if (windowWidth <= 1024 && windowWidth > 480) {
       setCurrentSlide(prev => prev < processSteps.length - 4 ? prev + 1 : 0);
     } else if (windowWidth <= 480) {
-      setCurrentSlide(prev => prev < processSteps.length - 1 ? prev + 1 : 0);
+      // Mobile now shows 2 cards, so we slide by 2
+      setCurrentSlide(prev => prev < processSteps.length - 2 ? prev + 2 : 0);
     }
   };
 
@@ -113,8 +116,25 @@ const [, setGifTimestamps] = useState({});
     } else if (windowWidth > 480 && windowWidth < 768) {
       return processSteps.slice(currentSlide, currentSlide + 2);
     } else {
-      return [processSteps[currentSlide]];
+      // Mobile now shows 2 cards instead of 1
+      return processSteps.slice(currentSlide, currentSlide + 2);
     }
+  };
+
+  // Swipe gestures
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const diff = e.changedTouches[0].clientX - touchStartX.current;
+    if (diff > 50) {
+      handlePrevSlide();
+    } else if (diff < -50) {
+      handleNextSlide();
+    }
+    touchStartX.current = null;
   };
 
   return (
@@ -157,7 +177,11 @@ const [, setGifTimestamps] = useState({});
 
         {/* Tablet/Mobile Slider */}
         {windowWidth <= 1024 && (
-          <div className="process-section__slider">
+          <div
+            className="process-section__slider"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             <div className="process-section__slider-row">
               {getVisibleCards().map((step, index) => (
                 <div key={index} className="process-section__slider-card active">

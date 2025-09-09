@@ -132,6 +132,9 @@
 }
 
 @media (max-width: 480px) {
+  .marquee-container{
+    padding: 2rem auto;
+  }
   .partner-logo {
     width: 100px;
     height: 80px;
