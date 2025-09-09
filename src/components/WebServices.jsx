@@ -124,7 +124,7 @@ const WebServices = () => {
                 <div className="overlay-content">
                   <h4>Ready to start?</h4>
                   <a
-                    href="https://wa.me/917838649867"
+                    href="https://wa.me/526634149718"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="overlay-cta"
@@ -136,23 +136,6 @@ const WebServices = () => {
             </div>
           ))}
         </div>
-
-        {/* <div className="services-bottom-cta">
-          <div className="cta-contentweb">
-            <h3>Ready to Transform Your Web Presence?</h3>
-            <p>Let's create something extraordinary together</p>
-            <a
-          href="https://wa.me/917838649867" // Replace with your WhatsApp number
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="ctaa-button">
-            <span>Start Your Project</span>
-            <ArrowRight className="ctaa-arrow" />
-          </button>
-        </a>
-          </div>
-        </div> */}
       </div>
     </section>
   )

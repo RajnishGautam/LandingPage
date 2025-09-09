@@ -27,7 +27,7 @@ const HeroSection = () => {
 
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/917838649867"
+        href="https://wa.me/526634149718"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-button"
@@ -53,7 +53,7 @@ const HeroSection = () => {
         </p>
 
         <a
-          href="https://wa.me/917838649867" // Replace with your WhatsApp number
+          href="https://wa.me/526634149718" // Replace with your WhatsApp number
           target="_blank"
           rel="noopener noreferrer"
         >
