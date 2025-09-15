@@ -20,7 +20,7 @@ body, html {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Sarabun', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -151,7 +151,7 @@ body, html {
 
 .hero-title-line1 {
   color: #fff;
-  font-size: clamp(2.5rem, 4vw, 6rem);
+  font-size:2.5rem;
   font-weight: normal;
   margin-bottom: 1.5rem;
   margin-top: 5rem;
@@ -159,14 +159,15 @@ body, html {
 
 .hero-title-line2 {
   color: #ffffff;
-  font-weight: 700;
-  font-size: clamp(2.5rem, 6.5vw, 10rem);
+  font-weight: normal;
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-title-line3 {
   color: #ffffff;
-  font-weight: 700;
-  font-size: clamp(2.5rem, 6.5vw, 10rem);
+  font-weight: normal;
+  font-size: 4.5rem;
 }
 
 .highlight-text {
@@ -186,11 +187,11 @@ body, html {
 
 .hero-subtitle {
   color: #888888;
-  font-size: clamp(1.125rem, 2.2vw, 5rem);
-  line-height: 0.7;
+  font-size: 1.5rem;
+  line-height: 1.5;
   margin: 2rem auto;
   max-width: 90%;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 /* CTA Button */
@@ -203,8 +204,8 @@ body, html {
   padding: 0.4rem 2rem;
   border: 2px solid #fff;
   border-radius: 50px;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: normal;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -385,15 +386,15 @@ body, html {
   }
   
   .hero-title-line1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: .5rem;
     margin-top: 1rem; /* Reduced since we added padding-top */
   }
   
   .hero-title-line2,
   .hero-title-line3 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: normal;
     line-height: 1.2;
   }
   

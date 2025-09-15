@@ -17,7 +17,7 @@
 }
 
 .header h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: normal;
   margin-top: 0.5rem;
   letter-spacing: .2rem;
@@ -48,16 +48,16 @@
 }
 
 .author .name {
-  font-weight: 600;
+  font-weight: normal;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
   line-height: 1;
 }
 
 .author .role {
   color: #b6a9a9;
-  font-size: 1rem; /* slightly smaller than name */
+  font-size: .8rem; /* slightly smaller than name */
   margin: 0;
   line-height: 1.1;
 }
@@ -81,10 +81,11 @@
 }
 
 .testimonial-text {
-  font-size: 1.2rem;
+  font-size: .8rem;
   line-height: 1;
   color: #eee;
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 .testimonials-grid {

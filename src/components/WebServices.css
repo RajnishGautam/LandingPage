@@ -22,7 +22,7 @@
 }
 
 .services-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: normal;
   position: relative;
   letter-spacing: .2rem;
@@ -51,15 +51,6 @@
   }
 }
 
-.services-subtitle {
-  font-size: 1.5rem;
-  color: #ffffff;
-  font-family: "sarabun";
-  font-weight: normal;
-  max-width: 100%;
-  margin: 0 auto;
-  line-height: 1.6;
-}
 
 /* Services Grid */
 .services-grid {
@@ -168,8 +159,8 @@
 
 /* Typography */
 .service-title {
-  font-family: sarabun;
-  font-size: 2.1rem;
+  font-family: 'sarabun',sans-serif;
+  font-size: 1.5rem;
   font-weight: normal;
   color: var(--text-color);
   line-height: 1;
@@ -179,7 +170,7 @@
 
 .service-description {
   font-family: sarabun;
-  font-size: 1.5rem;
+  font-size: .8rem;
   color: var(--text-color);
   line-height: 1; /* smoother text spacing */
   text-align: center;

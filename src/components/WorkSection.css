@@ -12,7 +12,7 @@
 }
 
 .work-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: normal;
 }
@@ -98,9 +98,9 @@
 
 .company-name {
   margin-top: 0rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #fff;
-  margin-left: 1rem;
+  margin-left: 0rem;
 }
 
 .visit-link {
@@ -108,10 +108,10 @@
   color: #fff;
   text-decoration: none;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: .8rem;
   letter-spacing: .1rem;
   transition: color 0.3s;
-  margin-left: 1rem;
+  margin-left: 0rem;
 }
 
 .visit-link:hover {

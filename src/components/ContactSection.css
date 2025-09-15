@@ -97,7 +97,7 @@
 }
 
 .discount-heading {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: var(--text-color);
   font-weight: normal;
   line-height: 1;
@@ -110,16 +110,8 @@
   margin-top: 10px;
 }
 
-.original-price {
-  font-size: 3.5rem;
-  color: #fff;
-  text-decoration: line-through;
-  opacity: 0.6;
-  font-weight: normal;
-}
-
 .discounted-price {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -167,7 +159,7 @@
   }
 }
 .tagline-text {
-  font: 26px prompt, sans-serif;
+  font: 1.5rem sarabun, sans-serif;
   color: var(--text-color);
   font-weight: normal;
 }
@@ -175,7 +167,7 @@
 /* === FORM DESCRIPTION === */
 .contact-desc {
   padding-top: 10px;
-  font: 16px prompt, sans-serif;
+  font: 14px prompt, sans-serif;
   color: var(--text-color);
   line-height: 1.7;
   max-width: 500px;
