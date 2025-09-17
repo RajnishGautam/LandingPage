@@ -52,7 +52,7 @@ const testimonialsData = [
     text: "Punto7x managed my social media marketing with creativity, increasing engagement and building stronger connections online."
   },
   {
-    name: "Abraham",
+    name: "Joakim",
     role: "Dentist",
     avatar: "/testinomials/Abraham.jpg",
     rating: 5,
